@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policies - VuzykDev</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <p class="app">VuzykDev</p>
+  <h1>Privacy Policies</h1>
+</header>
+
+<p id="notice" class="notice" hidden></p>
+<p>Choose an app to read its privacy policy.</p>
+
+<ul id="apps" class="apps"></ul>
+
+<noscript>
+  <ul class="apps">
+    <li><a href="lines98/"><span class="name">Lines 98: Pure Balls Puzzle</span></a></li>
+  </ul>
+</noscript>
+
+<footer>VuzykDev &middot; <a href="mailto:VuzykDev@proton.me">VuzykDev@proton.me</a></footer>
+
+<script>
+// To add an app: add an entry here and put its policy in <slug>/index.html.
+var APPS = [
+  { slug: "lines98", name: "Lines 98: Pure Balls Puzzle", desc: "Balls puzzle game" }
+];
+
+// Direct links: ?app=lines98 or #lines98 open that app's policy.
+var params = new URLSearchParams(location.search);
+var wanted = (params.get("app") || location.hash.replace(/^#\/?/, "")).toLowerCase();
+
+function findApp(slug) {
+  for (var i = 0; i < APPS.length; i++) {
+    if (APPS[i].slug === slug) return APPS[i];
+  }
+  return null;
+}
+
+if (wanted) {
+  var app = findApp(wanted);
+  if (app) {
+    location.replace(app.slug + "/");
+  } else {
+    var notice = document.getElementById("notice");
+    notice.textContent = "No privacy policy found for \"" + wanted + "\". Pick one from the list.";
+    notice.hidden = false;
+  }
+}
+
+var list = document.getElementById("apps");
+APPS.forEach(function (app) {
+  var li = document.createElement("li");
+  var a = document.createElement("a");
+  a.href = app.slug + "/";
+  var name = document.createElement("span");
+  name.className = "name";
+  name.textContent = app.name;
+  var desc = document.createElement("span");
+  desc.className = "desc";
+  desc.textContent = app.desc;
+  a.appendChild(name);
+  a.appendChild(desc);
+  li.appendChild(a);
+  list.appendChild(li);
+});
+</script>
+
+</body>
+</html>

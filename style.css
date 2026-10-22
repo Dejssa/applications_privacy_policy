@@ -1,0 +1,38 @@
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #fff;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+header { margin-bottom: 1.5em; }
+header .app { font-size: 1.1rem; font-weight: 600; margin: 0; }
+h1 { font-size: 2rem; margin: 0.2em 0 0.1em; padding-bottom: 0.3em; border-bottom: 2px solid #ccc; }
+h2 { font-size: 1.4rem; margin-top: 2em; padding-bottom: 0.2em; border-bottom: 1px solid #ccc; }
+h3 { font-size: 1.1rem; margin-top: 1.5em; }
+.updated { color: #666; margin: 0; }
+.back { display: inline-block; margin-bottom: 1em; }
+.apps { list-style: none; padding: 0; }
+.apps li { margin: 0 0 12px; }
+.apps a {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.apps a:hover, .apps a:focus { border-color: #3b82c4; }
+.apps .name { display: block; font-weight: 600; }
+.apps .desc { display: block; color: #666; font-size: 0.95rem; }
+.notice { background: #fdf3e1; border-left: 4px solid #d9962b; padding: 10px 14px; }
+footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ccc; color: #666; text-align: center; }
+@media (prefers-color-scheme: dark) {
+  body { color: #e5e5e5; background: #181818; }
+  h1, h2, footer, .apps a { border-color: #444; }
+  .apps a:hover, .apps a:focus { border-color: #5aa0e0; }
+  .updated, footer, .apps .desc { color: #aaa; }
+  .notice { background: #3a2f1c; border-left-color: #d9962b; }
+  a { color: #8ec1f5; }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found - VuzykDev</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <p class="app">VuzykDev</p>
+  <h1>Page not found</h1>
+</header>
+<p>This page does not exist. See the <a id="home" href="/">list of privacy policies</a>.</p>
+<script>
+// Project pages live under /<repo>/, so point home at the first path segment's root.
+var parts = location.pathname.split("/").filter(Boolean);
+if (location.hostname.endsWith("github.io") && parts.length) {
+  var base = "/" + parts[0] + "/";
+  document.getElementById("home").href = base;
+  var css = document.querySelector("link[rel=stylesheet]");
+  css.href = base + "style.css";
+}
+</script>
+</body>
+</html>
