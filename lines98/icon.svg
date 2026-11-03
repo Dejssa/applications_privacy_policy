@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="192" height="192" viewBox="0 0 120 120">
+<!-- In the units of the design canvas: the icon is 120 wide, a tile lies every 24.2, a ball is 17 wide and a future ball 8. -->
+<defs>
+<clipPath id="shape"><rect width="120" height="120" rx="27"/></clipPath>
+<radialGradient id="blue-body" cx="0.58" cy="0.34" r="0.8786">
+<stop offset="0" stop-color="#8EA2FF"/><stop offset="0.42" stop-color="#1034FF"/><stop offset="1" stop-color="#0A1A99"/>
+</radialGradient>
+<radialGradient id="cyan-body" cx="0.58" cy="0.34" r="0.8786">
+<stop offset="0" stop-color="#C4F0FF"/><stop offset="0.42" stop-color="#3FC3F5"/><stop offset="1" stop-color="#1B7FA8"/>
+</radialGradient>
+<radialGradient id="green-body" cx="0.58" cy="0.34" r="0.8786">
+<stop offset="0" stop-color="#7BE284"/><stop offset="0.42" stop-color="#0E9B1C"/><stop offset="1" stop-color="#06590F"/>
+</radialGradient>
+<radialGradient id="red-body" cx="0.58" cy="0.34" r="0.8786">
+<stop offset="0" stop-color="#FF8A84"/><stop offset="0.42" stop-color="#F02A20"/><stop offset="1" stop-color="#96120C"/>
+</radialGradient>
+<radialGradient id="pink-body" cx="0.58" cy="0.34" r="0.8786">
+<stop offset="0" stop-color="#FFA6D6"/><stop offset="0.42" stop-color="#F53DA5"/><stop offset="1" stop-color="#A3195F"/>
+</radialGradient>
+<radialGradient id="brown-body" cx="0.58" cy="0.34" r="0.8786">
+<stop offset="0" stop-color="#CF7A4A"/><stop offset="0.42" stop-color="#8A2D0A"/><stop offset="1" stop-color="#4E1803"/>
+</radialGradient>
+<radialGradient id="blue-bounce" cx="0.5" cy="0.94" r="0.7" gradientTransform="translate(0 0.94) scale(1 0.4286) translate(0 -0.94)">
+<stop offset="0" stop-color="#8EA2FF" stop-opacity="0.65"/><stop offset="1" stop-color="#8EA2FF" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="cyan-bounce" cx="0.5" cy="0.94" r="0.7" gradientTransform="translate(0 0.94) scale(1 0.4286) translate(0 -0.94)">
+<stop offset="0" stop-color="#C4F0FF" stop-opacity="0.65"/><stop offset="1" stop-color="#C4F0FF" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="green-bounce" cx="0.5" cy="0.94" r="0.7" gradientTransform="translate(0 0.94) scale(1 0.4286) translate(0 -0.94)">
+<stop offset="0" stop-color="#7BE284" stop-opacity="0.65"/><stop offset="1" stop-color="#7BE284" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="red-bounce" cx="0.5" cy="0.94" r="0.7" gradientTransform="translate(0 0.94) scale(1 0.4286) translate(0 -0.94)">
+<stop offset="0" stop-color="#FF8A84" stop-opacity="0.65"/><stop offset="1" stop-color="#FF8A84" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="pink-bounce" cx="0.5" cy="0.94" r="0.7" gradientTransform="translate(0 0.94) scale(1 0.4286) translate(0 -0.94)">
+<stop offset="0" stop-color="#FFA6D6" stop-opacity="0.65"/><stop offset="1" stop-color="#FFA6D6" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="brown-bounce" cx="0.5" cy="0.94" r="0.7" gradientTransform="translate(0 0.94) scale(1 0.4286) translate(0 -0.94)">
+<stop offset="0" stop-color="#CF7A4A" stop-opacity="0.65"/><stop offset="1" stop-color="#CF7A4A" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="shine">
+<stop offset="0.5" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="shade" cx="0.5" cy="0.4412" r="0.5588">
+<stop offset="0.474" stop-opacity="0"/><stop offset="0.579" stop-opacity="0.006"/><stop offset="0.684" stop-opacity="0.026"/><stop offset="0.789" stop-opacity="0.071"/><stop offset="0.895" stop-opacity="0.14"/><stop offset="1" stop-opacity="0.209"/>
+</radialGradient>
+<g id="tile">
+<path d="M0 0h23.2L0 23.2z" fill="#F4F5F6"/>
+<rect x="1" y="1" width="21.2" height="21.2" fill="#D4D5D7"/>
+</g>
+<g id="tiles">
+<use xlink:href="#tile"/>
+<use xlink:href="#tile" x="24.2"/>
+<use xlink:href="#tile" x="48.4"/>
+<use xlink:href="#tile" x="72.6"/>
+<use xlink:href="#tile" x="96.8"/>
+</g>
+<g id="blue">
+<circle r="8.5" fill="url(#blue-body)"/>
+<circle r="8.5" fill="url(#blue-bounce)"/>
+<circle cx="2.04" cy="-4.42" r="1.334" fill="url(#shine)"/>
+<circle r="8.5" fill="url(#shade)"/>
+</g>
+<g id="cyan">
+<circle r="8.5" fill="url(#cyan-body)"/>
+<circle r="8.5" fill="url(#cyan-bounce)"/>
+<circle cx="2.04" cy="-4.42" r="1.334" fill="url(#shine)"/>
+<circle r="8.5" fill="url(#shade)"/>
+</g>
+<g id="green">
+<circle r="8.5" fill="url(#green-body)"/>
+<circle r="8.5" fill="url(#green-bounce)"/>
+<circle cx="2.04" cy="-4.42" r="1.334" fill="url(#shine)"/>
+<circle r="8.5" fill="url(#shade)"/>
+</g>
+<g id="red">
+<circle r="8.5" fill="url(#red-body)"/>
+<circle r="8.5" fill="url(#red-bounce)"/>
+<circle cx="2.04" cy="-4.42" r="1.334" fill="url(#shine)"/>
+<circle r="8.5" fill="url(#shade)"/>
+</g>
+<g id="pink">
+<circle r="8.5" fill="url(#pink-body)"/>
+<circle r="8.5" fill="url(#pink-bounce)"/>
+<circle cx="2.04" cy="-4.42" r="1.334" fill="url(#shine)"/>
+<circle r="8.5" fill="url(#shade)"/>
+</g>
+<g id="brown">
+<circle r="8.5" fill="url(#brown-body)"/>
+<circle r="8.5" fill="url(#brown-bounce)"/>
+<circle cx="2.04" cy="-4.42" r="1.334" fill="url(#shine)"/>
+<circle r="8.5" fill="url(#shade)"/>
+</g>
+</defs>
+<g clip-path="url(#shape)">
+<rect width="120" height="120" fill="#8A8D92"/>
+<use xlink:href="#tiles"/>
+<use xlink:href="#tiles" y="24.2"/>
+<use xlink:href="#tiles" y="48.4"/>
+<use xlink:href="#tiles" y="72.6"/>
+<use xlink:href="#tiles" y="96.8"/>
+<use xlink:href="#blue" x="11.6" y="11.6"/>
+<use xlink:href="#pink" x="11.6" y="35.8"/>
+<use xlink:href="#blue" x="35.8" y="35.8"/>
+<use xlink:href="#brown" x="60" y="35.8"/>
+<use xlink:href="#cyan" transform="translate(84.2 35.8) scale(0.4706)"/>
+<use xlink:href="#green" x="11.6" y="60"/>
+<use xlink:href="#red" x="35.8" y="60"/>
+<use xlink:href="#blue" x="60" y="60"/>
+<use xlink:href="#cyan" x="84.2" y="60"/>
+<use xlink:href="#red" transform="translate(11.6 84.2) scale(0.4706)"/>
+<use xlink:href="#red" x="60" y="84.2"/>
+<use xlink:href="#blue" x="84.2" y="84.2"/>
+<use xlink:href="#cyan" x="35.8" y="108.4"/>
+<use xlink:href="#pink" transform="translate(60 108.4) scale(0.4706)"/>
+<use xlink:href="#blue" transform="translate(108.4 108.4) scale(0.4706)"/>
+</g>
+</svg>

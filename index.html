@@ -20,7 +20,14 @@
 
 <noscript>
   <ul class="apps">
-    <li><a href="lines98/"><span class="name">Lines 98: Pure Balls Puzzle</span></a></li>
+    <li>
+      <img class="icon" src="lines98/icon.svg" alt="" width="52" height="52">
+      <div class="info">
+        <span class="name">Lines 98: Pure Balls Puzzle</span>
+        <span class="desc">Balls puzzle game</span>
+        <span class="links"><a class="btn primary" href="lines98/">Privacy policy</a><a class="btn" href="lines98/licenses/">Licenses</a></span>
+      </div>
+    </li>
   </ul>
 </noscript>
 
@@ -28,8 +35,10 @@
 
 <script>
 // To add an app: add an entry here and put its policy in <slug>/index.html.
+// Set licenses: true when <slug>/licenses/index.html exists.
+// Put the app icon in <slug>/icon.svg and set icon: true; otherwise the first letter is shown.
 var APPS = [
-  { slug: "lines98", name: "Lines 98: Pure Balls Puzzle", desc: "Balls puzzle game" }
+  { slug: "lines98", name: "Lines 98: Pure Balls Puzzle", desc: "Balls puzzle game", icon: true, licenses: true }
 ];
 
 // Direct links: ?app=lines98 or #lines98 open that app's policy.
@@ -54,20 +63,41 @@ if (wanted) {
   }
 }
 
+function el(tag, cls, text) {
+  var e = document.createElement(tag);
+  e.className = cls;
+  if (text) e.textContent = text;
+  return e;
+}
+
+function link(cls, href, text) {
+  var a = el("a", cls, text);
+  a.href = href;
+  return a;
+}
+
 var list = document.getElementById("apps");
 APPS.forEach(function (app) {
   var li = document.createElement("li");
-  var a = document.createElement("a");
-  a.href = app.slug + "/";
-  var name = document.createElement("span");
-  name.className = "name";
-  name.textContent = app.name;
-  var desc = document.createElement("span");
-  desc.className = "desc";
-  desc.textContent = app.desc;
-  a.appendChild(name);
-  a.appendChild(desc);
-  li.appendChild(a);
+  var icon;
+  if (app.icon) {
+    icon = el("img", "icon");
+    icon.src = app.slug + "/icon.svg";
+    icon.alt = "";
+    icon.width = icon.height = 52;
+  } else {
+    icon = el("span", "icon", app.name.charAt(0));
+    icon.setAttribute("aria-hidden", "true");
+  }
+  var info = el("div", "info");
+  info.appendChild(el("span", "name", app.name));
+  info.appendChild(el("span", "desc", app.desc));
+  var links = el("span", "links");
+  links.appendChild(link("btn primary", app.slug + "/", "Privacy policy"));
+  if (app.licenses) links.appendChild(link("btn", app.slug + "/licenses/", "Licenses"));
+  info.appendChild(links);
+  li.appendChild(icon);
+  li.appendChild(info);
   list.appendChild(li);
 });
 </script>
